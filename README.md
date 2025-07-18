@@ -1,5 +1,3 @@
-Here are your refined trading rules, with improved clarity and grammar:
-
 Trading Rules
 These rules are designed to help you achieve consistent monthly and yearly profits using an Expert Advisor (EA).
 
