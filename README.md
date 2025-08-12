@@ -1,3 +1,5 @@
+Only MM Flip CodePro EA (Download on repo)
+
 Trading Rules
 These rules are designed to help you achieve consistent monthly and yearly profits using an Expert Advisor (EA).
 
