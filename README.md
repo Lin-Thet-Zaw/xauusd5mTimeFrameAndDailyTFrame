@@ -12,7 +12,7 @@ Asset: Trade Gold only.
 
 Timeframe & Account Setup: Run two separate EAs across two trading accounts, one for the 5-minute (5min TF) timeframe and the other for the Daily (Daily TF) timeframe.
 
-Deposit Requirements: For a lot size of 0.05, a minimum deposit of $50 is required. A deposit of $200 is recommended for optimal performance.
+Deposit Requirements: For a lot size of 0.01, and a minimum deposit of $200 is required. A deposit of $300 is recommended for optimal performance.
 
 Monthly Start: The EA must be started at the beginning of the month.
 
