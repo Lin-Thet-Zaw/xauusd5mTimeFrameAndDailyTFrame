@@ -12,7 +12,7 @@ Asset: Trade Gold only.
 
 Timeframe & Account Setup: Run two separate EAs across two trading accounts, one for the 5-minute (5min TF) timeframe and the other for the Daily (Daily TF) timeframe.
 
-Deposit Requirements: For a lot size of 0.01, and a minimum deposit of $200 is required. A deposit of $300 is recommended for optimal performance.
+Deposit Requirements: For a lot size of 0.01, and a minimum deposit of $500 is required. A deposit of $500 is recommended for optimal performance.
 
 Monthly Start: The EA must be started at the beginning of the month.
 
@@ -28,6 +28,6 @@ EA အသုံးပြုပုံ: EA ကို လ၏အစတွင် စ�
 
 အချိန်အပိုင်းအခြားနှင့် အကောင့်သတ်မှတ်မှု: EA နှစ်ခုကို သီးခြားကုန်သွယ်မှုအကောင့်နှစ်ခုတွင် ဖွင့်ပြီး ၅ မိနစ် (5min TF) နှင့် နေ့စဉ် (Daily TF) အချိန်အပိုင်းအခြားများအတွက် အသုံးပြုရပါမည်။
 
-အပ်နှံရမည့် ပမာဏ: Lot Size 0.01 အတွက် အနည်းဆုံး $200 အပ်နှံရပါမည်။ အကောင်းဆုံး စွမ်းဆောင်ရည်အတွက် $300အပ်နှံရန် အကြံပြုအပ်ပါသည်။
+အပ်နှံရမည့် ပမာဏ: Lot Size 0.01 အတွက် အနည်းဆုံး $500 အပ်နှံရပါမည်။ အကောင်းဆုံး စွမ်းဆောင်ရည်အတွက် $500အပ်နှံရန် အကြံပြုအပ်ပါသည်။
 
 လစဉ်စတင်ခြင်း: EA ကို လ၏အစတွင် မဖြစ်မနေ စတင်အသုံးပြုရပါမည်။
