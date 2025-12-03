@@ -1,3 +1,4 @@
+Notic upload never loss scapling ea 1,000,000usd or 100,000,000usc 
 Only MM Flip CodePro EA (Download on repo)
 
 Trading Rules
