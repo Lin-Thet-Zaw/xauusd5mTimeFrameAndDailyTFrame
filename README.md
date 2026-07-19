@@ -76,7 +76,7 @@ Then the EA will treat Exness `3:37` as if it were `6:37` when applying `InpStar
 ## 👤 Developer & Support
 - **Developer:** Lin Thet Zaw
 - **Facebook:** [Linthetzaw0](https://facebook.com)
-- **Telegram Support:** `@linthetzaw`
+- **Telegram Support:** `@lernthert`
 
 ---
 *Disclaimer: Forex and Gold trading carry high risks. Always test on a demo or cent account before running on a live standard account.*
