@@ -74,44 +74,6 @@ Because Exness server time is not the same as your VT broker’s server time.
 - If Exness is 3 hours behind VT, use `InpServerTimeOffset = 3`.
 - If Exness is 3 hours ahead of VT, use `InpServerTimeOffset = -3`.
 
-  
----
-
-## ⏰ Timezone & Broker Configuration
-
-The EA scans for market ranges between **00:00 and 05:00 Broker Server Time**. Because different brokers handle seasonal clock adjustments differently, you must configure **`InpServerTimeOffset`** precisely according to the specific calendar periods below:
-
-### 1. For VT Markets & TMGM Brokers (Dynamic Shift)
-These brokers change their clocks twice a year following US Daylight Saving Time (DST). You must manually update your setting on the specific weekends when the seasons change:
-
-#### ☀️ Set `InpServerTimeOffset = 0` (Summer Period)
-* **Months Active**: From **Mid-March** until **Late October / Early November**.
-* **Exact Rule**: Set to `0` starting on the **2nd Sunday of March** until the **1st Sunday of November**.
-* **Broker Status**: The broker server operates on **GMT+3**.
-* **Myanmar Time (MMT)**: The EA operates from **03:30 AM to 08:30 AM MMT**.
-* **Calendar Reference**:
-  * **2026**: Active from March 8, 2026, to October 31, 2026.
-  * **2027**: Active from March 14, 2027, to November 6, 2027.
-
-#### ❄️ Set `InpServerTimeOffset = 1` (Winter Period)
-* **Months Active**: From **November** until **Mid-March** of the following year.
-* **Exact Rule**: Set to `1` starting on the **1st Sunday of November** until the **2nd Sunday of March**.
-* **Broker Status**: The broker server drops to **GMT+2**.
-* **Myanmar Time (MMT)**: The EA operates from **04:30 AM to 09:30 AM MMT**.
-* **Calendar Reference**:
-  * **2026**: Set to `1` starting on **November 1, 2026**.
-  * **2027**: Set to `1` starting on **November 7, 2027**.
-
----
-
-### 2. For Exness Broker (Fixed Clock)
-Exness utilizes a fixed server clock that does not adjust for seasons. 
-* **Year-Round Configuration**: Set `InpServerTimeOffset = 3` permanently.
-* **Months Active**: All 12 months (January to December). Do not change this value.
-* **Myanmar Time (MMT)**: The EA operates from **03:30 AM to 08:30 AM MMT** year-round.
-
----
-
 ### How to Use It
 1. Open EA inputs in MetaTrader.
 2. Find `InpServerTimeOffset`.
