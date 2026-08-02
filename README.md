@@ -158,9 +158,6 @@ The algorithm was deployed across a deep historical tick data series on an **M1 
 * `InpNewsCheckMinutes`: Interval pacing configuration for verifying database updates (Recommended: `5` minutes).
 
 ### 3. Cloud License System
-* `InpLicenseKey`: Your unique system access token string parameter (Default format: `FOT-001-ABC`).
-* `InpAccountMode`: Server account state filtering module configuration (`0 = Auto Detect`, `1 = Demo Accounts Only`, `2 = Real Live Accounts`).
-
 ---
 
 ## 📥 Live Installation & WebRequest Setup Guidelines
@@ -175,7 +172,7 @@ To enable the automated News Filter and Cloud Authentication systems, the termin
    * `https://script.google.com` (For processing the remote cloud server license keys verification)
    * `https://script.googleusercontent.com` (For processing the remote cloud server license keys verification)
 5. Click **OK** to save and apply your terminal changes.
-6. Transfer your `FOT_Scalping.mq5` file into the terminal directories path: `/MQL5/Experts/`.
+6. Transfer your `FOT_Scalping.ex5` file into the terminal directories path: `/MQL5/Experts/`.
 7. Open MetaEditor (**F4**), load the code, and compile it (**F7**) ensuring there are zero errors.
 8. Drag the EA onto an **M1 Chart** of **XAUAUD** or **XAUUSD**, input your authorized `InpLicenseKey`, and make sure **Algo Trading** is enabled in the platform ribbon.
 
