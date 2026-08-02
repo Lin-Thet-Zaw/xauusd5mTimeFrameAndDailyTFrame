@@ -111,18 +111,17 @@ Then the EA will treat Exness `3:37` as if it were `6:37` when applying `InpStar
 
 # FOT Scalping (TrendBreakTrauma) Expert Advisor
 
-An institutional-grade, high-frequency algorithmic execution system built natively for **MetaTrader 5 (MQL5)**. This automated software application features state-of-the-art dynamic position sizing algorithms and structural multi-timeframe analytics optimized for high-volatility financial instruments.
+An institutional-grade, high-frequency algorithmic execution system built natively for **MetaTrader 5 (MQL5)**. This automated software application features state-of-the-art dynamic position sizing algorithms, advanced macro-news protection modules, and a cloud-based authentication system optimized for standard and cent portfolio setups.
 
 ---
 
 ## 🚀 Key System Features
 
 * **100% Real Ticks Verified**: Fully backtested and performance-optimized under `Every Tick Based on Real Ticks` premium broker data feeds.
-* **MT5 Native Calendar News Filter**: Features an un-disruptable internal macroeconomic data processing pipeline. It automatically protects active capital by pausing execution before and after major currency announcements without requiring external HTTP URLs.
+* **Automated Web News Filter**: Integrated live parsing framework that hooks directly into the global economic calendar feed via FairEconomy JSON endpoints. Dynamically pauses new market order execution during High-Impact news intervals to prevent drawdown spikes.
+* **Cloud License Authentication**: Secure cloud-linked license validation module powered by an encrypted Google Apps Script architecture to verify license keys and account states dynamically.
 * **Multi-Asset Digit Stabilization Engine**: Tailor-made mathematically to run flawlessly across changing broker quote decimal spaces (including 2-digit, 3-digit, and 5-digit feeds) such as Gold (**XAUUSD / XAUAUD**) and JPY cross-asset structures.
-* **Advanced Dual Capital Allocation Engine**:
-  * **Standard Fixed Sizing**: Rigid volume deployment for custom portfolio settings.
-  * **Dynamic Risk Percentage Management**: Automated real-time risk mitigation module that syncs trade lots directly relative to account equity buffers and underlying equity parameters.
+* **Advanced Dual Capital Allocation Engine**: Fully responsive and optimized to calculate sizing accurately on both Standard and Cent terminal accounts.
 
 ---
 
@@ -144,27 +143,41 @@ The algorithm was deployed across a deep historical tick data series on an **M1 
 
 ---
 
-## ⚙️ Input Sizing Controls
+## ⚙️ Core Inputs Configuration Guide
 
-### 1. Lot Sizing Module
+### 1. Lot Management System
 * `InpLotMode`: Toggle switch between `MODE_FIXED_LOT` or `MODE_RISK_PERCENT`.
-* `InpFixedLot`: Default base fixed position volume (Recommended at `0.02` for conservative capital management).
-* `InpRiskPercent`: Target active account equity risk liability ceiling parameter per individual position sequence (Optimized at `2.5%`).
+* `InpFixedLot`: Default base fixed contract volume (Optimized at `0.02` for conservative handling).
+* `InpRiskPercent`: Target active account equity risk liability threshold allocation per individual position sequence (Optimized at `2.5%`).
 
-### 2. Economic Calendar Engine Settings
-* `InpUseNewsFilter`: Enables or disables the core automated calendar blocking mechanism (`true` / `false`).
-* `InpMinsBeforeNews`: Protective quiet window length prior to a high-impact news release (Recommended: `30` minutes).
-* `InpMinsAfterNews`: Protective quiet window length following a high-impact news release (Recommended: `30` minutes).
-* `InpFilterHighOnly`: Focuses solely on blocking major economic macro volatility events (`true`).
+### 2. Economic Web News Filter Settings
+* `InpUseWebNewsFilter`: Enables or disables the live JSON economic calendar parsing gateway (`true` / `false`).
+* `InpMinsBeforeNews`: Restrictive cool-down window length prior to a matching calendar event (Recommended: `30` minutes).
+* `InpMinsAfterNews`: Restrictive quiet window padding length following a matching calendar event (Recommended: `30` minutes).
+* `InpNewsURL`: The structural endpoint URL for downloading weekly updates (`https://faireconomy.media`).
+* `InpNewsCheckMinutes`: Interval pacing configuration for verifying database updates (Recommended: `5` minutes).
+
+### 3. Cloud License System
+* `InpLicenseKey`: Your unique system access token string parameter (Default format: `FOT-001-ABC`).
+* `InpAccountMode`: Server account state filtering module configuration (`0 = Auto Detect`, `1 = Demo Accounts Only`, `2 = Real Live Accounts`).
 
 ---
 
-## 📥 Live Installation Guidelines
+## 📥 Live Installation & WebRequest Setup Guidelines
 
-1. Download the `FOT_Scalping.mq5` file and transfer it into the terminal directories: `/MQL5/Experts/`.
-2. Open MetaEditor (**F4**), load the file, and press compile (**F7**) ensuring the system finishes with zero script execution warnings.
-3. Open your MT5 platform, navigate to the **Toolbox (Ctrl+T)**, click the **Calendar** tab, right-click inside the window and check **Auto Update** to allow the application to cache the historical calendar indexes.
-4. Open a chart window on **XAUAUD** or **XAUUSD**, change timeframe to **M1**, drag the Expert Advisor onto the canvas, and ensure **Algo Trading** is enabled in the platform ribbon.
+To enable the automated News Filter and Cloud Authentication systems, the terminal requires explicit permission to communicate with external data streams.
+
+1. Open your MT5 Terminal and navigate to the top main menu: **Tools -> Options**.
+2. Click on the **Expert Advisors** tab inside the Options window panel.
+3. Check the box labeled **"Allow WebRequest for listed URL:"**.
+4. Double-click the **`<add new URL here>`** field and add the following two mandatory URLs exactly as shown:
+   * `https://faireconomy.media` (For downloading live macroeconomic calendar news)
+   * `https://script.google.com` (For processing the remote cloud server license keys verification)
+   * `https://script.googleusercontent.com` (For processing the remote cloud server license keys verification)
+5. Click **OK** to save and apply your terminal changes.
+6. Transfer your `FOT_Scalping.mq5` file into the terminal directories path: `/MQL5/Experts/`.
+7. Open MetaEditor (**F4**), load the code, and compile it (**F7**) ensuring there are zero errors.
+8. Drag the EA onto an **M1 Chart** of **XAUAUD** or **XAUUSD**, input your authorized `InpLicenseKey`, and make sure **Algo Trading** is enabled in the platform ribbon.
 
 ---
 ## ⚖️ Risk and Liability Disclaimer
@@ -175,7 +188,3 @@ Speculative margin operations on leveraged markets involve notable financial exp
 ---
 *Disclaimer: Forex and Gold trading carry high structural risks. Always test on a demo or cent account before running on a live standard account.*
 
-- **Telegram Support:** `@lernthert`
-
----
-*Disclaimer: Forex and Gold trading carry high structural risks. Always test on a demo or cent account before running on a live standard account.*
