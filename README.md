@@ -109,7 +109,7 @@ Then the EA will treat Exness `3:37` as if it were `6:37` when applying `InpStar
 
 
 
-# FOT Scalping (TrendBreakTrauma) Expert Advisor
+# FOT Scalping Expert Advisor
 
 An institutional-grade, high-frequency algorithmic execution system built natively for **MetaTrader 5 (MQL5)**. This automated software application features state-of-the-art dynamic position sizing algorithms, advanced macro-news protection modules, and a cloud-based authentication system optimized for standard and cent portfolio setups.
 
