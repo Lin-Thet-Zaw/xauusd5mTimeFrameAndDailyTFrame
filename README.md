@@ -105,6 +105,76 @@ Then the EA will treat Exness `3:37` as if it were `6:37` when applying `InpStar
 ## 👤 Developer & Support
 - **Developer:** Lin Thet Zaw
 - **Facebook:** [Linthetzaw0](https://facebook.com)
+
+
+
+
+# FOT Scalping (TrendBreakTrauma) Expert Advisor
+
+An institutional-grade, high-frequency algorithmic execution system built natively for **MetaTrader 5 (MQL5)**. This automated software application features state-of-the-art dynamic position sizing algorithms and structural multi-timeframe analytics optimized for high-volatility financial instruments.
+
+---
+
+## 🚀 Key System Features
+
+* **100% Real Ticks Verified**: Fully backtested and performance-optimized under `Every Tick Based on Real Ticks` premium broker data feeds.
+* **MT5 Native Calendar News Filter**: Features an un-disruptable internal macroeconomic data processing pipeline. It automatically protects active capital by pausing execution before and after major currency announcements without requiring external HTTP URLs.
+* **Multi-Asset Digit Stabilization Engine**: Tailor-made mathematically to run flawlessly across changing broker quote decimal spaces (including 2-digit, 3-digit, and 5-digit feeds) such as Gold (**XAUUSD / XAUAUD**) and JPY cross-asset structures.
+* **Advanced Dual Capital Allocation Engine**:
+  * **Standard Fixed Sizing**: Rigid volume deployment for custom portfolio settings.
+  * **Dynamic Risk Percentage Management**: Automated real-time risk mitigation module that syncs trade lots directly relative to account equity buffers and underlying equity parameters.
+
+---
+
+## 📊 Backtest Performance Overview (XAUAUD-VIP)
+
+The algorithm was deployed across a deep historical tick data series on an **M1 Chart Matrix** with an account leverage parameter of `1:500`. Below is the official audited metrics table taken from the MetaTrader 5 Strategy Tester.
+
+### 🏆 System Performance Metrics
+
+| Evaluation Metric | Dynamic Risk 2.5% Mode (Recommended) | Stable Fixed Lot 0.02 Mode |
+| :--- | :---: | :---: |
+| **Initial Deposit (အရင်း)** | \$1,000.00 | \$1,000.00 |
+| **Total Net Profit (အသားတင်အမြတ်)** | **\$565.87 (+56.5%)** | **\$968.48 (+96.8%)** |
+| **Profit Factor (အမြတ်အရှုံးအချိုး)** | **2.03** | **1.98** |
+| **Sharpe Ratio (တည်ငြိမ်မှုအချိုး)** | **9.60 (Elite High-Performance)** | **8.58** |
+| **Max Equity Drawdown (အကောင့်ဆွဲချမှု)** | **10.04% (\$149.38)** | **17.98% (\$228.17)** |
+| **Recovery Factor** | **3.79** | **4.24** |
+| **Total Trades / Deals** | 102 / 204 | 102 / 204 |
+
+---
+
+## ⚙️ Input Sizing Controls
+
+### 1. Lot Sizing Module
+* `InpLotMode`: Toggle switch between `MODE_FIXED_LOT` or `MODE_RISK_PERCENT`.
+* `InpFixedLot`: Default base fixed position volume (Recommended at `0.02` for conservative capital management).
+* `InpRiskPercent`: Target active account equity risk liability ceiling parameter per individual position sequence (Optimized at `2.5%`).
+
+### 2. Economic Calendar Engine Settings
+* `InpUseNewsFilter`: Enables or disables the core automated calendar blocking mechanism (`true` / `false`).
+* `InpMinsBeforeNews`: Protective quiet window length prior to a high-impact news release (Recommended: `30` minutes).
+* `InpMinsAfterNews`: Protective quiet window length following a high-impact news release (Recommended: `30` minutes).
+* `InpFilterHighOnly`: Focuses solely on blocking major economic macro volatility events (`true`).
+
+---
+
+## 📥 Live Installation Guidelines
+
+1. Download the `FOT_Scalping.mq5` file and transfer it into the terminal directories: `/MQL5/Experts/`.
+2. Open MetaEditor (**F4**), load the file, and press compile (**F7**) ensuring the system finishes with zero script execution warnings.
+3. Open your MT5 platform, navigate to the **Toolbox (Ctrl+T)**, click the **Calendar** tab, right-click inside the window and check **Auto Update** to allow the application to cache the historical calendar indexes.
+4. Open a chart window on **XAUAUD** or **XAUUSD**, change timeframe to **M1**, drag the Expert Advisor onto the canvas, and ensure **Algo Trading** is enabled in the platform ribbon.
+
+---
+## ⚖️ Risk and Liability Disclaimer
+Speculative margin operations on leveraged markets involve notable financial exposure thresholds. Historical backtesting matrices are synthetic data indices and do not guarantee live market equity replication. Deploy entirely at your own discretion.
+
+- **Telegram Support:** `@lernthert`
+
+---
+*Disclaimer: Forex and Gold trading carry high structural risks. Always test on a demo or cent account before running on a live standard account.*
+
 - **Telegram Support:** `@lernthert`
 
 ---
