@@ -1,3 +1,88 @@
+# MM FLIP Auto Trade AI (MT4 EA)
+
+An advanced algorithmic Expert Advisor (EA) designed for MetaTrader 4, featuring multi-timeframe trend filtering, smart post-news volatility checks, live dashboard telemetry, and robust risk management.
+
+---
+
+## 📊 Strategy & Timeframes Overview
+- **H1 (`PERIOD_H1`):** Macro Trend Filter (EMA & ADX Trend Strength)
+- **M15 (`PERIOD_M15`):** Trend Confirmation (RSI 50 Level Filter)
+- **M5 (`PERIOD_M5`):** Execution, Pending Order Buffer Entry, & Trade Management
+
+---
+
+## 📈 Backtesting Results
+- **Symbol:** XAUUSD-VIP (Gold vs USD)
+- **Period:** 5 Minutes (M5) | 2026.08.03 - 2026.08.07
+- **Model:** Every tick (90.00% quality)
+- **Initial Deposit:** 10.00
+- **Total Net Profit:** 3976.02
+- **Profit Factor:** 1.58
+- **Maximal Drawdown:** 279.98 (6.99%)
+- **Total Trades:** 2231 (69.57% Win Rate)
+
+### Key Parameters Used in Test
+- `RiskPercent = 1.0`
+- `UseADX_TrendFilter = true` (Level: 25)
+- `TrendMA_Period = 200` | `Trend_EntryMA = 20`
+- `ServerProfitPips = 220` | `ServerLossPips = 120`
+- `UseTrailingStop = true` | `UseBreakEven = true`
+
+---
+
+## 📥 Installation Guide
+
+Follow these simple steps to install the EA and its required indicators on your MetaTrader 4 terminal:
+
+### Step 1: Prepare Your Files
+1. Download or clone this repository to your local computer.
+2. Locate your compiled files:
+   - **Expert Advisor (`.ex4` or `.mq4`):** `MM_FLIP_AI.ex4`
+   - **Required Indicator:** `FFCal2.ex4` (Required for the Real News Filter)
+
+### Step 2: Open MetaTrader 4 Data Folder
+1. Open your MT4 terminal.
+2. On the top monitor/menu, click on **File** > **Open Data Folder**.
+3. A Windows Explorer window will pop up showing your MT4 root data directory. Navigate to `MQL4/`.
+
+### Step 3: Place Files into Correct Folders
+- **For the Expert Advisor:**
+  - Open the `Experts` folder inside `MQL4/`.
+  - Paste your `MM_FLIP_AI.ex4` (or source file) here.
+- **For the Custom Indicator:**
+  - Open the `Indicators` folder inside `MQL4/`.
+  - Paste the `FFCal2.ex4` file here (Note: The News Filter relies on this indicator to fetch calendar events).
+
+### Step 4: Refresh MT4 Terminal
+1. Go back to your MetaTrader 4 platform.
+2. Look at the **Navigator** panel on the left side.
+3. Right-click anywhere inside the **Expert Advisors** or **Indicators** list and select **Refresh** (or restart your MT4 terminal).
+
+### Step 5: Attach EA to Chart
+1. Open a chart window for your target asset (e.g., **XAUUSD**, M5 timeframe recommended).
+2. Drag and drop `MM_FLIP_AI` from the Navigator panel onto the chart.
+3. In the popup window settings:
+   - Go to the **Common** tab and check **"Allow live trading"** and **"Allow DLL imports"** (if required).
+   - Go to the **Inputs** tab to configure your License Key, Terminal ID, Risk %, and other parameters.
+4. Click **OK**. The Live Dashboard should now appear cleanly on the top-left corner of your chart.
+
+---
+
+## ⚙️ Recommended Settings
+- **Account Type:** ECN / Raw Spread (Supports both Standard and Cent accounts)
+- **Leverage:** 1:500 recommended for risk management calculation.
+- **Default Parameters:** Optimized for standard market conditions on M5 execution timeframe.
+
+---
+
+## ⚠️ Important Risk Warning & Disclaimer
+- **Not Financial Advice:** This software and its documentation are provided for **educational and informational purposes only**. They do not constitute financial, investment, or trading advice.
+- **Use At Your Own Risk:** Trading foreign exchange, CFDs, and cryptocurrencies on margin carries a high level of risk and may not be suitable for all investors. Past performance (including backtest results) does not guarantee future results.
+- **Be Smart, Not Greedy:** Never risk capital you cannot afford to lose. Always test strategies thoroughly on a Demo account under live market conditions before deploying real funds.
+
+
+
+
 # FibRetracementEA (Gold Optimized Scalper Engine) 🚀
 
 An institutional-grade, multi-threaded Fibonacci 0.618 Retracement Expert Advisor tailored explicitly for trading Gold (**XAUUSD**) on the MetaTrader 5 (MQL5) platform. 
