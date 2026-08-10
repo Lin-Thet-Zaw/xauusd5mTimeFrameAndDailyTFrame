@@ -25,7 +25,7 @@ An advanced algorithmic Expert Advisor (EA) designed for MetaTrader 4, featuring
 - `RiskPercent = 1.0`
 - `UseADX_TrendFilter = true` (Level: 25)
 - `TrendMA_Period = 200` | `Trend_EntryMA = 20`
-- `ServerProfitPips = 220` | `ServerLossPips = 120`
+- `ServerProfitPips = 300` | `ServerLossPips = 150`
 - `UseTrailingStop = true` | `UseBreakEven = true`
 
 ---
