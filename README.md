@@ -2,6 +2,40 @@
 
 An advanced algorithmic Expert Advisor (EA) designed for MetaTrader 4, featuring multi-timeframe trend filtering, smart post-news volatility checks, live dashboard telemetry, and robust risk management.
 
+# MM FLIP AUTO TRADE AI (v3.0.6) - Broker Compatibility & HFT Rules Guide
+
+This document outlines the operational behavior of **`MaxHourlyRequests = 0`** and **`PendingExpirySeconds = 1`** across different brokers, detailing how high-frequency actions impact trading server stability.
+
+---
+
+## 1. Deep Dive: `MaxHourlyRequests = 0`
+
+### What happens when you set `MaxHourlyRequests = 0`?
+* **Functionality:** Setting this parameter to **`0`** disables the internal hourly request counter safety check entirely within the EA logic. It does **not** stop the EA from trading; rather, it bypasses the code's self-imposed restriction on how many total requests (Send + Delete + Modify) can be made per hour.
+
+### Broker Breakdown:
+* **Exness:** 
+  * **Status: Fully Compatible (`MaxHourlyRequests = 0` is safe)**
+  * **Reasoning:** Exness is built for robust algorithmic and high-speed execution. It does not enforce strict cumulative hourly rate-limit counters on retail accounts in the way some ECN/STP brokers do. You can safely keep this at `0` to let the EA execute freely.
+* **VT Markets & Strict ECN/STP Brokers:**
+  * **Status: Dangerous (`MaxHourlyRequests` should be > 590)**
+  * **Reasoning:** Strict brokers track precise hourly ceilings (e.g., max 400 modification requests per hour). Leaving this at `0` (disabled) means your EA has no internal shield against breaching broker limits during high-volatility sessions, which can lead to account warnings or temporary blocks.
+
+---
+
+## 2. Deep Dive: `PendingExpirySeconds = 1`
+
+### What happens when you set `PendingExpirySeconds = 1`?
+* **The Loop Hazard:** When a pending order is placed with a **1-second expiry**, if the market price does not trigger or cross the order within 1 second, the order immediately expires and is deleted by the server. 
+* **The HFT Flag Risk:** Immediately upon deletion, the EA logic attempts to evaluate the market and place a **new** pending order. Repeating this open-delete-reopen cycle every single second can mimic aggressive High-Frequency Trading (HFT) patterns.
+
+### Consequences:
+* **Server Errors:** Broker anti-bot systems may flag the rapid-fire requests, returning execution errors such as:
+  * `138` (Trade context busy)
+  * `Too many requests` / Rate-limit rejections.
+
+---
+
 ---
 
 ## 📊 Strategy & Timeframes Overview
