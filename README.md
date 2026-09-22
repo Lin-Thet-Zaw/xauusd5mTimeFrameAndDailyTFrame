@@ -1,4 +1,4 @@
-# MM FLIP Auto Trade AI (MT4 EA) RECOMEND EXNESS RAW ACCOUNT
+# MM FLIP Auto Trade AI (MT4 EA) Recommended: EXNESS RAW ACCOUNT
 
 An advanced algorithmic Expert Advisor (EA) designed for MetaTrader 4, featuring multi-timeframe trend filtering, smart post-news volatility checks, live dashboard telemetry, and robust risk management.
 
