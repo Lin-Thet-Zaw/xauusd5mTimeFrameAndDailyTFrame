@@ -1,3 +1,290 @@
+# Strategy Tester Reports
+
+---
+
+## 1. BTC Price Flip EA (BTCUSD)
+
+### Overview
+
+* **Expert Advisor:** BTC Price Flip EA
+* **Broker / Account:** VTMarkets-Demo (Build 6230)
+* **Company:** VT Markets (Pty) Ltd
+* **Symbol:** BTCUSD
+* **Period:** M1 (2026.03.03 - 2026.03.05)
+* **Currency:** USD
+* **Initial Deposit:** 10 000.00
+* **Leverage:** 1:500
+
+### Expert Settings
+
+#### Entry (Stable MA) Settings
+| Parameter | Value |
+| --- | --- |
+| `MagicNumber` | 201801019 |
+| `Slippage` | 50 |
+
+#### Cent Account Settings
+| Parameter | Value |
+| --- | --- |
+| `IsCentAccount` | false |
+| `CentSlippage` | 30 |
+| `CentScaleFactor` | 100.0 |
+
+#### Basket TP (Points)
+| Parameter | Value |
+| --- | --- |
+| `FixedTPPoints` | 3000 |
+
+#### Lots
+| Parameter | Value |
+| --- | --- |
+| `LotSize` | 0.01 |
+| `MaxTrades` | 10000 |
+
+#### High Impact News Filter
+| Parameter | Value |
+| --- | --- |
+| `UseNewsFilter` | false |
+| `MinutesBeforeNews` | 60 |
+| `MinutesAfterNews` | 60 |
+
+#### News: Event-Specific Windows
+| Parameter | Value |
+| --- | --- |
+| `UseCategoryWindows` | false |
+| `MajorBeforeMinutes` | 120 |
+| `MajorAfterMinutes` | 120 |
+| `MajorKeywords` | Non-Farm, FOMC, Fed Interest Rate, CPI, Consumer Price, Core CPI, PCE, Interest Rate Decision |
+
+#### News Panel (Display)
+| Parameter | Value |
+| --- | --- |
+| `ShowNewsPanel` | false |
+| `NewsLookaheadHours` | 24 |
+| `MaxNewsLines` | 10 |
+
+#### Branding & License Config
+| Parameter | Value |
+| --- | --- |
+| `ShowBrandBanner` | false |
+| `LicenseKey` | YOUR-LICENSE-KEY |
+
+#### Telegram Bot Control
+| Parameter | Value |
+| --- | --- |
+| `UseTelegramControl` | false |
+| `TgBotToken` | *(empty)* |
+| `TgChatID` | *(empty)* |
+| `TgPollSeconds` | 5 |
+
+### Performance Summary
+
+#### General Metrics
+* **History Quality:** 99% real ticks
+* **Bars:** 2 880
+* **Ticks:** 662 772
+* **Symbols:** 1
+* **Total Net Profit:** 1 532.46
+* **Gross Profit:** 4 491.59
+* **Gross Loss:** -2 959.13
+
+#### Drawdown
+* **Balance Drawdown Absolute:** 1 638.25
+* **Balance Drawdown Maximal:** 6.60 (17.36%)
+* **Balance Drawdown Relative:** 17.36% (1 756.60)
+* **Equity Drawdown Absolute:** 6 568.70
+* **Equity Drawdown Maximal:** 6 687.05 (66.09%)
+* **Equity Drawdown Relative:** 66.09% (6 687.05)
+
+#### Risk & Reward Ratios
+* **Profit Factor:** 1.52
+* **Expected Payoff:** 1.43
+* **Recovery Factor:** 0.23
+* **Sharpe Ratio:** 1.37
+* **Margin Level:** 181.39%
+* **Z-Score:** -0.78 (56.46%)
+* **AHPR:** 0.002 (0.02%)
+* **GHPR:** 0.001 (0.01%)
+* **LR Correlation:** 0.93
+* **LR Standard Error:** 175.15
+* **OnTester Result:** 0
+
+### Detailed Trade Statistics
+
+#### Position Holdings & Correlations
+* **Correlation (Profits, MFE):** 0.91
+* **Correlation (Profits, MAE):** -0.29
+* **Correlation (MFE, MAE):** -0.60
+* **Minimal Position Holding Time:** 0:00:01
+* **Maximal Position Holding Time:** 2:35:31
+* **Average Position Holding Time:** 0:07:08
+
+#### Trade Counts & Win Rates
+* **Total Trades:** 1 068
+* **Total Deals:** 2 136
+* **Short Trades (won %):** 359 (62.12%)
+* **Long Trades (won %):** 709 (62.76%)
+* **Profit Trades (% of total):** 668 (62.55%)
+* **Loss Trades (% of total):** 400 (37.45%)
+
+#### Profit & Loss Extremes
+* **Largest Profit Trade:** 1 953.05
+* **Largest Loss Trade:** -366.87
+* **Average Profit Trade:** 6.72
+* **Average Loss Trade:** -7.40
+
+#### Consecutive Trades Breakdown
+* **Maximum Consecutive Wins (\$):** 12 (15.72)
+* **Maximum Consecutive Losses (\$):** 11 (-1 756.60)
+* **Maximal Consecutive Profit (count):** 2 264.20 (4)
+* **Maximal Consecutive Loss (count):** -1 756.60 (11)
+* **Average Consecutive Wins:** 3
+* **Average Consecutive Losses:** 2
+
+---
+
+## 2. Price Flip EA (XAUUSD-VIP)
+
+### Overview
+
+* **Expert Advisor:** Price Flip EA
+* **Broker / Account:** VTMarkets-Demo (Build 6230)
+* **Company:** VT Markets (Pty) Ltd
+* **Symbol:** XAUUSD-VIP
+* **Period:** M1 (2026.03.03 - 2026.03.05)
+* **Currency:** USD
+* **Initial Deposit:** 10 000.00
+* **Leverage:** 1:500
+
+### Expert Settings
+
+#### Entry Settings
+| Parameter | Value | 
+| ----- | ----- | 
+| `MagicNumber` | 20180101 | 
+| `Slippage` | 3 | 
+
+#### Cent Account Settings
+| Parameter | Value | 
+| ----- | ----- | 
+| `IsCentAccount` | false | 
+| `CentSlippage` | 30 | 
+| `CentScaleFactor` | 100.0 | 
+
+#### Basket TP (Points)
+| Parameter | Value | 
+| ----- | ----- | 
+| `FixedTPPoints` | 400 | 
+
+#### Lots
+| Parameter | Value | 
+| ----- | ----- | 
+| `LotSize` | 0.01 | 
+| `MaxTrades` | 10000 | 
+
+#### High Impact News Filter
+| Parameter | Value | 
+| ----- | ----- | 
+| `UseNewsFilter` | false | 
+| `MinutesBeforeNews` | 60 | 
+| `MinutesAfterNews` | 60 | 
+
+#### News: Event-Specific Windows
+| Parameter | Value | 
+| ----- | ----- | 
+| `UseCategoryWindows` | false | 
+| `MajorBeforeMinutes` | 120 | 
+| `MajorAfterMinutes` | 120 | 
+| `MajorKeywords` | Non-Farm, FOMC, Fed Interest Rate, CPI, Consumer Price, Core CPI, PCE, Interest Rate Decision | 
+
+#### News Panel (Display)
+| Parameter | Value | 
+| ----- | ----- | 
+| `ShowNewsPanel` | false | 
+| `NewsLookaheadHours` | 24 | 
+| `MaxNewsLines` | 10 | 
+
+#### Branding & License
+| Parameter | Value | 
+| ----- | ----- | 
+| `ShowBrandBanner` | false | 
+| `LicenseKey` | YOUR-LICENSE-KEY | 
+
+#### Telegram Bot Control
+| Parameter | Value | 
+| ----- | ----- | 
+| `UseTelegramControl` | false | 
+| `TgBotToken` | *(empty)* | 
+| `TgChatID` | *(empty)* | 
+| `TgPollSeconds` | 5 | 
+
+### Performance Summary
+
+#### General Metrics
+* **History Quality:** 99% real ticks
+* **Bars:** 2 756
+* **Ticks:** 1 719 293
+* **Symbols:** 1
+* **Total Net Profit:** 3 067.78
+* **Gross Profit:** 9 313.89
+* **Gross Loss:** -6 246.11
+
+#### Drawdown
+* **Balance Drawdown Absolute:** 781.67
+* **Balance Drawdown Maximal:** 9.14 (11.51%)
+* **Balance Drawdown Relative:** 1% (1 199.14)
+* **Equity Drawdown Absolute:** 2 408.14
+* **Equity Drawdown Maximal:** 2 825.61 (27.12%)
+* **Equity Drawdown Relative:** 27.12% (2 825.61)
+
+#### Risk & Reward Ratios
+* **Profit Factor:** 1.49
+* **Expected Payoff:** 2.56
+* **Recovery Factor:** 1.09
+* **Sharpe Ratio:** 7.11
+* **Margin Level:** 430.65%
+* **Z-Score:** 3.38 (99.74%)
+* **AHPR:** 0.002 (0.02%)
+* **GHPR:** 0.002 (0.02%)
+* **LR Correlation:** 1.00
+* **LR Standard Error:** 89.79
+* **OnTester Result:** 0
+
+### Detailed Trade Statistics
+
+#### Position Holdings & Correlations
+* **Correlation (Profits, MFE):** 0.87
+* **Correlation (Profits, MAE):** 0.02
+* **Correlation (MFE, MAE):** -0.42
+* **Minimal Position Holding Time:** 0:00:01
+* **Maximal Position Holding Time:** 1:35:51
+* **Average Position Holding Time:** 0:04:40
+
+#### Trade Counts & Win Rates
+* **Total Trades:** 1 200
+* **Total Deals:** 2 400
+* **Short Trades (won %):** 655 (56.18%)
+* **Long Trades (won %):** 545 (55.41%)
+* **Profit Trades (% of total):** 670 (55.83%)
+* **Loss Trades (% of total):** 530 (44.17%)
+
+#### Profit & Loss Extremes
+* **Largest Profit Trade:** 1 135.40
+* **Largest Loss Trade:** -256.34
+* **Average Profit Trade:** 13.90
+* **Average Loss Trade:** -11.79
+
+#### Consecutive Trades Breakdown
+* **Maximum Consecutive Wins (\$):** 9 (46.19)
+* **Maximum Consecutive Losses (\$):** 7 (-1 199.14)
+* **Maximal Consecutive Profit (count):** 1 219.45 (2)
+* **Maximal Consecutive Loss (count):** -1 199.14 (7)
+* **Average Consecutive Wins:** 2
+* **Average Consecutive Losses:** 2
+
+
+
+
 # Strategy Tester Report: Price Flip EA
 
 ## Overview
